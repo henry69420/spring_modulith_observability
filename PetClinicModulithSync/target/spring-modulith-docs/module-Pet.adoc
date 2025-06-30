@@ -1,0 +1,11 @@
+[%autowidth.stretch, cols="h,a"]
+|===
+|Base package
+|`org.springframework.samples.Pet`
+|Spring components
+|_Services_
+
+* `o.s.s.P.PetExternalAPI`, `o.s.s.P.PetPublicAPI` (via `o.s.s.P.service.PetService`)
+|Bean references
+|* `o.s.s.O.OwnerPublicAPI` (in Owner)
+|===

@@ -1,0 +1,48 @@
+@startuml
+
+hide circle
+hide methods
+
+class Owner {
+    - firstName
+    - lastName
+    - address
+    - telephoneNumber
+    - city
+}
+
+class Pet {
+    - name
+    - birthDate
+}
+
+class Visit {
+    - date
+    - description
+}
+
+class Vet{
+    -firstName
+    -lastName
+}
+
+class Specialty {
+    -name
+}
+
+class VetSpecialty{
+}
+
+class PetType {
+    - type
+}
+
+
+Owner "1" -- "0..*" Pet : < has
+Pet "1" -- "0..*" Visit : < of
+
+Pet "1..*" -right- "1" PetType: has >
+Vet "0..*" -down- "0..*" Specialty : has >
+(Vet, Specialty).VetSpecialty
+
+@enduml

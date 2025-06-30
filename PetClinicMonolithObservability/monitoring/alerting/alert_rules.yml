@@ -1,0 +1,23 @@
+apiVersion: 1
+
+groups:
+  - name: App_Status
+    folder: Infrastructure
+    interval: 1m
+    rules:
+      - uid: "monolith-down-001"
+        title: "Monolith DOWN"
+        condition: A
+        data:
+          - refId: A
+            datasourceUid: PBFA97CFB590B2093  # UID fixo da fonte de dados
+            model:
+              expr: up{job="monolith"} == 0 OR vector(0)
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "{{ $labels.instance }} OFFLINE"
+          description: |
+            O Monolith ({{ $labels.job }}) está DOWN há mais de 30 segundos.
+

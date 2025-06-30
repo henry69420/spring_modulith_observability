@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: "modulith_sync"
+    metrics_path: "/internal/prometheus"  # Endpoint do Spring Boot Actuator
+    static_configs:
+      - targets: ["host.docker.internal:8080"]  # App Spring fora do Docker (máquina host)

@@ -1,0 +1,540 @@
+2025-06-30T14:53:10.399+01:00  INFO 14848 --- [main] [                                                 ] o.s.s.petclinic.PetClinicApplication     : Starting PetClinicApplication using Java 17.0.14 with PID 14848 (C:\spring_modulith-main\PetClinicMonolithObservability\target\classes started by henri in C:\spring_modulith-main)
+2025-06-30T14:53:10.407+01:00  INFO 14848 --- [main] [                                                 ] o.s.s.petclinic.PetClinicApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-06-30T14:53:12.081+01:00  INFO 14848 --- [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-30T14:53:12.158+01:00  INFO 14848 --- [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
+2025-06-30T14:53:13.262+01:00  INFO 14848 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-30T14:53:13.290+01:00  INFO 14848 --- [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-30T14:53:13.290+01:00  INFO 14848 --- [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2025-06-30T14:53:13.387+01:00  INFO 14848 --- [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-30T14:53:13.387+01:00  INFO 14848 --- [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2905 ms
+2025-06-30T14:53:14.191+01:00  INFO 14848 --- [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-30T14:53:14.459+01:00  INFO 14848 --- [main] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:f7d36417-460f-4a85-9b38-943198439bdc user=SA
+2025-06-30T14:53:14.463+01:00  INFO 14848 --- [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-30T14:53:14.714+01:00  INFO 14848 --- [main] [                                                 ] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-30T14:53:14.814+01:00  INFO 14848 --- [main] [                                                 ] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-06-30T14:53:14.865+01:00  INFO 14848 --- [main] [                                                 ] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-30T14:53:15.183+01:00  INFO 14848 --- [main] [                                                 ] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-30T14:53:16.553+01:00  INFO 14848 --- [main] [                                                 ] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-30T14:53:16.556+01:00  INFO 14848 --- [main] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-30T14:53:16.936+01:00  INFO 14848 --- [main] [                                                 ] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-30T14:53:19.001+01:00  INFO 14848 --- [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/internal'
+2025-06-30T14:53:19.128+01:00  INFO 14848 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-06-30T14:53:19.148+01:00  INFO 14848 --- [main] [                                                 ] o.s.s.config.TaskSchedulerRouter         : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2025-06-30T14:53:19.153+01:00  INFO 14848 --- [main] [                                                 ] o.s.s.petclinic.PetClinicApplication     : Started PetClinicApplication in 9.308 seconds (process running for 20.168)
+2025-06-30T14:54:59.598+01:00  INFO 14848 --- [http-nio-8080-exec-1] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-30T14:54:59.607+01:00  INFO 14848 --- [http-nio-8080-exec-1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-30T14:54:59.656+01:00  INFO 14848 --- [http-nio-8080-exec-1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 48 ms
+2025-06-30T15:02:00.325+01:00  WARN 14848 --- [SpringApplicationShutdownHook] [                                                 ] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 42102, SQLState: 42S02
+2025-06-30T15:02:00.333+01:00 ERROR 14848 --- [SpringApplicationShutdownHook] [                                                 ] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table "EVENT_PUBLICATION" not found; SQL statement:
+select jep1_0.id,jep1_0.completion_date,jep1_0.event_type,jep1_0.listener_id,jep1_0.publication_date,jep1_0.serialized_event from event_publication jep1_0 where jep1_0.completion_date is null order by jep1_0.publication_date [42102-224]
+2025-06-30T15:02:00.348+01:00  WARN 14848 --- [SpringApplicationShutdownHook] [                                                 ] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'eventPublicationRegistry': org.hibernate.exception.SQLGrammarException: could not prepare statement [Table "EVENT_PUBLICATION" not found; SQL statement:
+select jep1_0.id,jep1_0.completion_date,jep1_0.event_type,jep1_0.listener_id,jep1_0.publication_date,jep1_0.serialized_event from event_publication jep1_0 where jep1_0.completion_date is null order by jep1_0.publication_date [42102-224]] [select jep1_0.id,jep1_0.completion_date,jep1_0.event_type,jep1_0.listener_id,jep1_0.publication_date,jep1_0.serialized_event from event_publication jep1_0 where jep1_0.completion_date is null order by jep1_0.publication_date]
+2025-06-30T15:02:00.382+01:00  INFO 14848 --- [SpringApplicationShutdownHook] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-30T15:02:00.398+01:00  INFO 14848 --- [SpringApplicationShutdownHook] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-30T15:02:00.411+01:00  INFO 14848 --- [SpringApplicationShutdownHook] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-30T15:25:18.896+01:00  INFO 4360 --- [main] [                                                 ] o.s.s.petclinic.PetClinicApplication     : Starting PetClinicApplication using Java 17.0.14 with PID 4360 (C:\spring_modulith-main\PetClinicMonolithObservability\target\classes started by henri in C:\spring_modulith-main)
+2025-06-30T15:25:18.900+01:00  INFO 4360 --- [main] [                                                 ] o.s.s.petclinic.PetClinicApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-06-30T15:25:20.808+01:00  INFO 4360 --- [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-30T15:25:20.886+01:00  INFO 4360 --- [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 2 JPA repository interfaces.
+2025-06-30T15:25:22.028+01:00  INFO 4360 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-30T15:25:22.058+01:00  INFO 4360 --- [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-30T15:25:22.058+01:00  INFO 4360 --- [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2025-06-30T15:25:22.147+01:00  INFO 4360 --- [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-30T15:25:22.148+01:00  INFO 4360 --- [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3180 ms
+2025-06-30T15:25:22.925+01:00  INFO 4360 --- [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-30T15:25:23.191+01:00  INFO 4360 --- [main] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:d68c62e1-567b-4364-8300-9db14dc2245d user=SA
+2025-06-30T15:25:23.194+01:00  INFO 4360 --- [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-30T15:25:23.398+01:00  INFO 4360 --- [main] [                                                 ] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-30T15:25:23.489+01:00  INFO 4360 --- [main] [                                                 ] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-06-30T15:25:23.538+01:00  INFO 4360 --- [main] [                                                 ] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-30T15:25:23.927+01:00  INFO 4360 --- [main] [                                                 ] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-30T15:25:25.541+01:00  INFO 4360 --- [main] [                                                 ] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-30T15:25:25.545+01:00  INFO 4360 --- [main] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-30T15:25:25.916+01:00  INFO 4360 --- [main] [                                                 ] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-30T15:25:28.236+01:00  INFO 4360 --- [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/internal'
+2025-06-30T15:25:28.396+01:00  INFO 4360 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-06-30T15:25:28.417+01:00  INFO 4360 --- [main] [                                                 ] o.s.s.config.TaskSchedulerRouter         : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2025-06-30T15:25:28.424+01:00  INFO 4360 --- [main] [                                                 ] o.s.s.petclinic.PetClinicApplication     : Started PetClinicApplication in 10.306 seconds (process running for 11.775)
+2025-06-30T15:25:29.000+01:00  INFO 4360 --- [RMI TCP Connection(1)-169.254.230.255] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-30T15:25:29.001+01:00  INFO 4360 --- [RMI TCP Connection(1)-169.254.230.255] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-30T15:25:29.003+01:00  INFO 4360 --- [RMI TCP Connection(1)-169.254.230.255] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-06-30T15:30:28.940+01:00  WARN 4360 --- [SpringApplicationShutdownHook] [                                                 ] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 42102, SQLState: 42S02
+2025-06-30T15:30:28.959+01:00 ERROR 4360 --- [SpringApplicationShutdownHook] [                                                 ] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table "EVENT_PUBLICATION" not found; SQL statement:
+select jep1_0.id,jep1_0.completion_date,jep1_0.event_type,jep1_0.listener_id,jep1_0.publication_date,jep1_0.serialized_event from event_publication jep1_0 where jep1_0.completion_date is null order by jep1_0.publication_date [42102-224]
+2025-06-30T15:30:28.973+01:00  WARN 4360 --- [SpringApplicationShutdownHook] [                                                 ] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'eventPublicationRegistry': org.hibernate.exception.SQLGrammarException: could not prepare statement [Table "EVENT_PUBLICATION" not found; SQL statement:
+select jep1_0.id,jep1_0.completion_date,jep1_0.event_type,jep1_0.listener_id,jep1_0.publication_date,jep1_0.serialized_event from event_publication jep1_0 where jep1_0.completion_date is null order by jep1_0.publication_date [42102-224]] [select jep1_0.id,jep1_0.completion_date,jep1_0.event_type,jep1_0.listener_id,jep1_0.publication_date,jep1_0.serialized_event from event_publication jep1_0 where jep1_0.completion_date is null order by jep1_0.publication_date]
+2025-06-30T15:30:28.999+01:00  INFO 4360 --- [SpringApplicationShutdownHook] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-30T15:30:29.019+01:00  INFO 4360 --- [SpringApplicationShutdownHook] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-30T15:30:29.031+01:00  INFO 4360 --- [SpringApplicationShutdownHook] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-30T15:34:45.399+01:00  INFO 24496 --- [main] [                                                 ] o.s.s.petclinic.PetClinicApplication     : Starting PetClinicApplication using Java 17.0.14 with PID 24496 (C:\spring_modulith-main\PetClinicMonolithObservability\target\classes started by henri in C:\spring_modulith-main)
+2025-06-30T15:34:45.402+01:00  INFO 24496 --- [main] [                                                 ] o.s.s.petclinic.PetClinicApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-06-30T15:34:46.884+01:00  INFO 24496 --- [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-30T15:34:46.969+01:00  INFO 24496 --- [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 2 JPA repository interfaces.
+2025-06-30T15:34:48.090+01:00  INFO 24496 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-30T15:34:48.115+01:00  INFO 24496 --- [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-30T15:34:48.115+01:00  INFO 24496 --- [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2025-06-30T15:34:48.225+01:00  INFO 24496 --- [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-30T15:34:48.225+01:00  INFO 24496 --- [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2772 ms
+2025-06-30T15:34:49.031+01:00  INFO 24496 --- [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-30T15:34:49.328+01:00  INFO 24496 --- [main] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:e65f5727-c491-46d6-af26-0dc84d5a2fe8 user=SA
+2025-06-30T15:34:49.332+01:00  INFO 24496 --- [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-30T15:34:49.504+01:00  INFO 24496 --- [main] [                                                 ] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-30T15:34:49.608+01:00  INFO 24496 --- [main] [                                                 ] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-06-30T15:34:49.654+01:00  INFO 24496 --- [main] [                                                 ] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-30T15:34:49.940+01:00  INFO 24496 --- [main] [                                                 ] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-30T15:34:51.456+01:00  INFO 24496 --- [main] [                                                 ] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-30T15:34:51.460+01:00  INFO 24496 --- [main] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-30T15:34:51.818+01:00  INFO 24496 --- [main] [                                                 ] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-30T15:34:53.949+01:00  INFO 24496 --- [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/internal'
+2025-06-30T15:34:54.087+01:00  INFO 24496 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-06-30T15:34:54.112+01:00  INFO 24496 --- [main] [                                                 ] o.s.s.config.TaskSchedulerRouter         : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2025-06-30T15:34:54.118+01:00  INFO 24496 --- [main] [                                                 ] o.s.s.petclinic.PetClinicApplication     : Started PetClinicApplication in 9.288 seconds (process running for 10.573)
+2025-06-30T15:34:54.456+01:00  INFO 24496 --- [RMI TCP Connection(3)-169.254.230.255] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-30T15:34:54.456+01:00  INFO 24496 --- [RMI TCP Connection(3)-169.254.230.255] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-30T15:34:54.458+01:00  INFO 24496 --- [RMI TCP Connection(3)-169.254.230.255] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-06-30T15:58:24.167+01:00 ERROR 24496 --- [http-nio-8080-exec-5] [                                                 ] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Expected: controller used to showcase what happens when an exception is thrown] with root cause
+
+java.lang.RuntimeException: Expected: controller used to showcase what happens when an exception is thrown
+	at org.springframework.samples.petclinic.system.MonoCrashController.triggerException(MonoCrashController.java:13) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:262) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.17.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.17.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-06-30T16:00:59.530+01:00 ERROR 24496 --- [http-nio-8080-exec-10] [                                                 ] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Expected: controller used to showcase what happens when an exception is thrown] with root cause
+
+java.lang.RuntimeException: Expected: controller used to showcase what happens when an exception is thrown
+	at org.springframework.samples.petclinic.system.MonoCrashController.triggerException(MonoCrashController.java:13) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:262) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.17.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.17.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-06-30T16:08:17.589+01:00 ERROR 24496 --- [http-nio-8080-exec-1] [                                                 ] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Expected: controller used to showcase what happens when an exception is thrown] with root cause
+
+java.lang.RuntimeException: Expected: controller used to showcase what happens when an exception is thrown
+	at org.springframework.samples.petclinic.system.MonoCrashController.triggerException(MonoCrashController.java:13) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:262) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.17.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.17.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-06-30T16:08:18.753+01:00 ERROR 24496 --- [http-nio-8080-exec-8] [                                                 ] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.RuntimeException: Expected: controller used to showcase what happens when an exception is thrown] with root cause
+
+java.lang.RuntimeException: Expected: controller used to showcase what happens when an exception is thrown
+	at org.springframework.samples.petclinic.system.MonoCrashController.triggerException(MonoCrashController.java:13) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:262) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.17.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.2.jar:6.1.2]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.17.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.2.jar:6.1.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.17.jar:10.1.17]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2025-06-30T16:25:19.079+01:00  WARN 24496 --- [SpringApplicationShutdownHook] [                                                 ] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 42102, SQLState: 42S02
+2025-06-30T16:25:19.093+01:00 ERROR 24496 --- [SpringApplicationShutdownHook] [                                                 ] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table "EVENT_PUBLICATION" not found; SQL statement:
+select jep1_0.id,jep1_0.completion_date,jep1_0.event_type,jep1_0.listener_id,jep1_0.publication_date,jep1_0.serialized_event from event_publication jep1_0 where jep1_0.completion_date is null order by jep1_0.publication_date [42102-224]
+2025-06-30T16:25:19.111+01:00  WARN 24496 --- [SpringApplicationShutdownHook] [                                                 ] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'eventPublicationRegistry': org.hibernate.exception.SQLGrammarException: could not prepare statement [Table "EVENT_PUBLICATION" not found; SQL statement:
+select jep1_0.id,jep1_0.completion_date,jep1_0.event_type,jep1_0.listener_id,jep1_0.publication_date,jep1_0.serialized_event from event_publication jep1_0 where jep1_0.completion_date is null order by jep1_0.publication_date [42102-224]] [select jep1_0.id,jep1_0.completion_date,jep1_0.event_type,jep1_0.listener_id,jep1_0.publication_date,jep1_0.serialized_event from event_publication jep1_0 where jep1_0.completion_date is null order by jep1_0.publication_date]
+2025-06-30T16:25:19.156+01:00  INFO 24496 --- [SpringApplicationShutdownHook] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-30T16:25:19.182+01:00  INFO 24496 --- [SpringApplicationShutdownHook] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-30T16:25:19.202+01:00  INFO 24496 --- [SpringApplicationShutdownHook] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-30T17:02:05.070+01:00  INFO 6200 --- [main] [                                                 ] o.s.s.petclinic.PetClinicApplication     : Starting PetClinicApplication using Java 17.0.14 with PID 6200 (C:\spring_modulith-main\PetClinicMonolithObservability\target\classes started by henri in C:\spring_modulith-main)
+2025-06-30T17:02:05.073+01:00  INFO 6200 --- [main] [                                                 ] o.s.s.petclinic.PetClinicApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-06-30T17:02:06.814+01:00  INFO 6200 --- [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-30T17:02:06.887+01:00  INFO 6200 --- [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 2 JPA repository interfaces.
+2025-06-30T17:02:08.049+01:00  INFO 6200 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-30T17:02:08.080+01:00  INFO 6200 --- [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-30T17:02:08.080+01:00  INFO 6200 --- [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2025-06-30T17:02:08.193+01:00  INFO 6200 --- [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-30T17:02:08.193+01:00  INFO 6200 --- [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3054 ms
+2025-06-30T17:02:09.055+01:00  INFO 6200 --- [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-30T17:02:09.392+01:00  INFO 6200 --- [main] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:51cb5f16-a787-46c5-9d1f-473e6bae86dc user=SA
+2025-06-30T17:02:09.394+01:00  INFO 6200 --- [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-30T17:02:09.636+01:00  INFO 6200 --- [main] [                                                 ] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-30T17:02:09.786+01:00  INFO 6200 --- [main] [                                                 ] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-06-30T17:02:09.864+01:00  INFO 6200 --- [main] [                                                 ] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-30T17:02:10.234+01:00  INFO 6200 --- [main] [                                                 ] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-30T17:02:11.746+01:00  INFO 6200 --- [main] [                                                 ] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-30T17:02:11.751+01:00  INFO 6200 --- [main] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-30T17:02:12.127+01:00  INFO 6200 --- [main] [                                                 ] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-30T17:02:14.337+01:00  INFO 6200 --- [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/internal'
+2025-06-30T17:02:14.467+01:00  INFO 6200 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-06-30T17:02:14.488+01:00  INFO 6200 --- [main] [                                                 ] o.s.s.config.TaskSchedulerRouter         : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2025-06-30T17:02:14.494+01:00  INFO 6200 --- [main] [                                                 ] o.s.s.petclinic.PetClinicApplication     : Started PetClinicApplication in 10.002 seconds (process running for 20.88)
+2025-06-30T17:02:28.901+01:00  INFO 6200 --- [http-nio-8080-exec-1] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-30T17:02:28.901+01:00  INFO 6200 --- [http-nio-8080-exec-1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-30T17:02:28.903+01:00  INFO 6200 --- [http-nio-8080-exec-1] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-06-30T17:13:40.150+01:00  WARN 6200 --- [SpringApplicationShutdownHook] [                                                 ] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 42102, SQLState: 42S02
+2025-06-30T17:13:40.165+01:00 ERROR 6200 --- [SpringApplicationShutdownHook] [                                                 ] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table "EVENT_PUBLICATION" not found; SQL statement:
+select jep1_0.id,jep1_0.completion_date,jep1_0.event_type,jep1_0.listener_id,jep1_0.publication_date,jep1_0.serialized_event from event_publication jep1_0 where jep1_0.completion_date is null order by jep1_0.publication_date [42102-224]
+2025-06-30T17:13:40.182+01:00  WARN 6200 --- [SpringApplicationShutdownHook] [                                                 ] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'eventPublicationRegistry': org.hibernate.exception.SQLGrammarException: could not prepare statement [Table "EVENT_PUBLICATION" not found; SQL statement:
+select jep1_0.id,jep1_0.completion_date,jep1_0.event_type,jep1_0.listener_id,jep1_0.publication_date,jep1_0.serialized_event from event_publication jep1_0 where jep1_0.completion_date is null order by jep1_0.publication_date [42102-224]] [select jep1_0.id,jep1_0.completion_date,jep1_0.event_type,jep1_0.listener_id,jep1_0.publication_date,jep1_0.serialized_event from event_publication jep1_0 where jep1_0.completion_date is null order by jep1_0.publication_date]
+2025-06-30T17:13:40.209+01:00  INFO 6200 --- [SpringApplicationShutdownHook] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-30T17:13:40.227+01:00  INFO 6200 --- [SpringApplicationShutdownHook] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-30T17:13:40.242+01:00  INFO 6200 --- [SpringApplicationShutdownHook] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-30T17:21:12.368+01:00  INFO 9376 --- [main] [                                                 ] o.s.s.petclinic.PetClinicApplication     : Starting PetClinicApplication using Java 17.0.14 with PID 9376 (C:\spring_modulith-main\PetClinicMonolithObservability\target\classes started by henri in C:\spring_modulith-main)
+2025-06-30T17:21:12.371+01:00  INFO 9376 --- [main] [                                                 ] o.s.s.petclinic.PetClinicApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-06-30T17:21:13.992+01:00  INFO 9376 --- [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-30T17:21:14.073+01:00  INFO 9376 --- [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 2 JPA repository interfaces.
+2025-06-30T17:21:15.167+01:00  INFO 9376 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-30T17:21:15.197+01:00  INFO 9376 --- [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-30T17:21:15.197+01:00  INFO 9376 --- [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2025-06-30T17:21:15.284+01:00  INFO 9376 --- [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-30T17:21:15.284+01:00  INFO 9376 --- [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2843 ms
+2025-06-30T17:21:16.095+01:00  INFO 9376 --- [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-30T17:21:16.424+01:00  INFO 9376 --- [main] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:928f19c8-86e9-4060-abc8-4f40dd7d84dd user=SA
+2025-06-30T17:21:16.426+01:00  INFO 9376 --- [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-30T17:21:16.617+01:00  INFO 9376 --- [main] [                                                 ] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-30T17:21:16.718+01:00  INFO 9376 --- [main] [                                                 ] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-06-30T17:21:16.768+01:00  INFO 9376 --- [main] [                                                 ] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-30T17:21:17.193+01:00  INFO 9376 --- [main] [                                                 ] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-30T17:21:18.923+01:00  INFO 9376 --- [main] [                                                 ] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-30T17:21:18.927+01:00  INFO 9376 --- [main] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-30T17:21:19.368+01:00  INFO 9376 --- [main] [                                                 ] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-30T17:21:21.609+01:00  INFO 9376 --- [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/internal'
+2025-06-30T17:21:21.749+01:00  INFO 9376 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-06-30T17:21:21.770+01:00  INFO 9376 --- [main] [                                                 ] o.s.s.config.TaskSchedulerRouter         : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2025-06-30T17:21:21.776+01:00  INFO 9376 --- [main] [                                                 ] o.s.s.petclinic.PetClinicApplication     : Started PetClinicApplication in 10.174 seconds (process running for 11.471)
+2025-06-30T17:21:22.098+01:00  INFO 9376 --- [RMI TCP Connection(1)-169.254.230.255] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-30T17:21:22.099+01:00  INFO 9376 --- [RMI TCP Connection(1)-169.254.230.255] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-30T17:21:22.100+01:00  INFO 9376 --- [RMI TCP Connection(1)-169.254.230.255] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-30T17:26:30.152+01:00  WARN 9376 --- [SpringApplicationShutdownHook] [                                                 ] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 42102, SQLState: 42S02
+2025-06-30T17:26:30.159+01:00 ERROR 9376 --- [SpringApplicationShutdownHook] [                                                 ] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table "EVENT_PUBLICATION" not found; SQL statement:
+select jep1_0.id,jep1_0.completion_date,jep1_0.event_type,jep1_0.listener_id,jep1_0.publication_date,jep1_0.serialized_event from event_publication jep1_0 where jep1_0.completion_date is null order by jep1_0.publication_date [42102-224]
+2025-06-30T17:26:30.166+01:00  WARN 9376 --- [SpringApplicationShutdownHook] [                                                 ] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'eventPublicationRegistry': org.hibernate.exception.SQLGrammarException: could not prepare statement [Table "EVENT_PUBLICATION" not found; SQL statement:
+select jep1_0.id,jep1_0.completion_date,jep1_0.event_type,jep1_0.listener_id,jep1_0.publication_date,jep1_0.serialized_event from event_publication jep1_0 where jep1_0.completion_date is null order by jep1_0.publication_date [42102-224]] [select jep1_0.id,jep1_0.completion_date,jep1_0.event_type,jep1_0.listener_id,jep1_0.publication_date,jep1_0.serialized_event from event_publication jep1_0 where jep1_0.completion_date is null order by jep1_0.publication_date]
+2025-06-30T17:26:30.176+01:00  INFO 9376 --- [SpringApplicationShutdownHook] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-30T17:26:30.184+01:00  INFO 9376 --- [SpringApplicationShutdownHook] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-30T17:26:30.188+01:00  INFO 9376 --- [SpringApplicationShutdownHook] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-30T17:26:39.810+01:00  INFO 11792 --- [main] [                                                 ] o.s.s.petclinic.PetClinicApplication     : Starting PetClinicApplication using Java 17.0.14 with PID 11792 (C:\spring_modulith-main\PetClinicMonolithObservability\target\classes started by henri in C:\spring_modulith-main)
+2025-06-30T17:26:39.814+01:00  INFO 11792 --- [main] [                                                 ] o.s.s.petclinic.PetClinicApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-06-30T17:26:41.555+01:00  INFO 11792 --- [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-30T17:26:41.655+01:00  INFO 11792 --- [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 2 JPA repository interfaces.
+2025-06-30T17:26:43.333+01:00  INFO 11792 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-30T17:26:43.379+01:00  INFO 11792 --- [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-30T17:26:43.380+01:00  INFO 11792 --- [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2025-06-30T17:26:43.652+01:00  INFO 11792 --- [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-30T17:26:43.653+01:00  INFO 11792 --- [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3782 ms
+2025-06-30T17:26:44.899+01:00  INFO 11792 --- [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-30T17:26:45.494+01:00  INFO 11792 --- [main] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:8258c011-15ae-4927-b9a2-9e99c483eee8 user=SA
+2025-06-30T17:26:45.497+01:00  INFO 11792 --- [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-30T17:26:45.762+01:00  INFO 11792 --- [main] [                                                 ] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-30T17:26:45.892+01:00  INFO 11792 --- [main] [                                                 ] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-06-30T17:26:45.963+01:00  INFO 11792 --- [main] [                                                 ] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-30T17:26:46.473+01:00  INFO 11792 --- [main] [                                                 ] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-30T17:26:48.934+01:00  INFO 11792 --- [main] [                                                 ] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-30T17:26:48.940+01:00  INFO 11792 --- [main] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-30T17:26:49.741+01:00  INFO 11792 --- [main] [                                                 ] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-30T17:26:53.050+01:00  INFO 11792 --- [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/internal'
+2025-06-30T17:26:53.200+01:00  INFO 11792 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-06-30T17:26:53.222+01:00  INFO 11792 --- [main] [                                                 ] o.s.s.config.TaskSchedulerRouter         : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2025-06-30T17:26:53.228+01:00  INFO 11792 --- [main] [                                                 ] o.s.s.petclinic.PetClinicApplication     : Started PetClinicApplication in 13.994 seconds (process running for 15.343)
+2025-06-30T17:26:53.793+01:00  INFO 11792 --- [RMI TCP Connection(4)-169.254.230.255] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-30T17:26:53.793+01:00  INFO 11792 --- [RMI TCP Connection(4)-169.254.230.255] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-30T17:26:53.795+01:00  INFO 11792 --- [RMI TCP Connection(4)-169.254.230.255] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-06-30T17:28:51.402+01:00  WARN 11792 --- [SpringApplicationShutdownHook] [                                                 ] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 42102, SQLState: 42S02
+2025-06-30T17:28:51.407+01:00 ERROR 11792 --- [SpringApplicationShutdownHook] [                                                 ] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table "EVENT_PUBLICATION" not found; SQL statement:
+select jep1_0.id,jep1_0.completion_date,jep1_0.event_type,jep1_0.listener_id,jep1_0.publication_date,jep1_0.serialized_event from event_publication jep1_0 where jep1_0.completion_date is null order by jep1_0.publication_date [42102-224]
+2025-06-30T17:28:51.422+01:00  WARN 11792 --- [SpringApplicationShutdownHook] [                                                 ] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'eventPublicationRegistry': org.hibernate.exception.SQLGrammarException: could not prepare statement [Table "EVENT_PUBLICATION" not found; SQL statement:
+select jep1_0.id,jep1_0.completion_date,jep1_0.event_type,jep1_0.listener_id,jep1_0.publication_date,jep1_0.serialized_event from event_publication jep1_0 where jep1_0.completion_date is null order by jep1_0.publication_date [42102-224]] [select jep1_0.id,jep1_0.completion_date,jep1_0.event_type,jep1_0.listener_id,jep1_0.publication_date,jep1_0.serialized_event from event_publication jep1_0 where jep1_0.completion_date is null order by jep1_0.publication_date]
+2025-06-30T17:28:51.443+01:00  INFO 11792 --- [SpringApplicationShutdownHook] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-30T17:28:51.463+01:00  INFO 11792 --- [SpringApplicationShutdownHook] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-30T17:28:51.469+01:00  INFO 11792 --- [SpringApplicationShutdownHook] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-30T17:29:32.088+01:00  INFO 5512 --- [main] [                                                 ] o.s.s.petclinic.PetClinicApplication     : Starting PetClinicApplication using Java 17.0.14 with PID 5512 (C:\spring_modulith-main\PetClinicMonolithObservability\target\classes started by henri in C:\spring_modulith-main)
+2025-06-30T17:29:32.092+01:00  INFO 5512 --- [main] [                                                 ] o.s.s.petclinic.PetClinicApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-06-30T17:29:33.622+01:00  INFO 5512 --- [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-30T17:29:33.699+01:00  INFO 5512 --- [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 2 JPA repository interfaces.
+2025-06-30T17:29:34.844+01:00  INFO 5512 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-30T17:29:34.891+01:00  INFO 5512 --- [main] [                                                 ] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-30T17:29:34.892+01:00  INFO 5512 --- [main] [                                                 ] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.17]
+2025-06-30T17:29:34.999+01:00  INFO 5512 --- [main] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-30T17:29:34.999+01:00  INFO 5512 --- [main] [                                                 ] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2837 ms
+2025-06-30T17:29:35.845+01:00  INFO 5512 --- [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-30T17:29:36.089+01:00  INFO 5512 --- [main] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:71579fe1-4628-4e8e-a1e1-be9ac7b73403 user=SA
+2025-06-30T17:29:36.091+01:00  INFO 5512 --- [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-30T17:29:36.268+01:00  INFO 5512 --- [main] [                                                 ] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-30T17:29:36.376+01:00  INFO 5512 --- [main] [                                                 ] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-06-30T17:29:36.421+01:00  INFO 5512 --- [main] [                                                 ] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-30T17:29:36.741+01:00  INFO 5512 --- [main] [                                                 ] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-30T17:29:38.141+01:00  INFO 5512 --- [main] [                                                 ] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-30T17:29:38.145+01:00  INFO 5512 --- [main] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-30T17:29:38.560+01:00  INFO 5512 --- [main] [                                                 ] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-30T17:29:40.790+01:00  INFO 5512 --- [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/internal'
+2025-06-30T17:29:40.936+01:00  INFO 5512 --- [main] [                                                 ] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2025-06-30T17:29:40.958+01:00  INFO 5512 --- [main] [                                                 ] o.s.s.config.TaskSchedulerRouter         : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2025-06-30T17:29:40.964+01:00  INFO 5512 --- [main] [                                                 ] o.s.s.petclinic.PetClinicApplication     : Started PetClinicApplication in 9.458 seconds (process running for 11.144)
+2025-06-30T17:29:41.687+01:00  INFO 5512 --- [RMI TCP Connection(1)-169.254.230.255] [                                                 ] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-30T17:29:41.687+01:00  INFO 5512 --- [RMI TCP Connection(1)-169.254.230.255] [                                                 ] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-30T17:29:41.691+01:00  INFO 5512 --- [RMI TCP Connection(1)-169.254.230.255] [                                                 ] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-06-30T17:31:00.777+01:00 ERROR 5512 --- [OkHttp http://localhost:4318/...] [                                                 ] i.o.exporter.internal.http.HttpExporter  : Failed to export spans. The request could not be executed. Full error message: unexpected end of stream on http://localhost:4318/...
+
+java.io.IOException: unexpected end of stream on http://localhost:4318/...
+	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:210) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:110) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:93) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:34) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RealCall$AsyncCall.run(RealCall.kt:517) ~[okhttp-4.12.0.jar:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+	Suppressed: java.io.IOException: unexpected end of stream on http://localhost:4318/...
+		... 17 common frames omitted
+	Caused by: java.io.EOFException: \n not found: limit=0 content=…
+		at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:335)
+		at okhttp3.internal.http1.HeadersReader.readLine(HeadersReader.kt:29)
+		at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:180)
+		... 16 common frames omitted
+Caused by: java.io.EOFException: \n not found: limit=0 content=…
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:335) ~[okio-jvm-3.6.0.jar:na]
+	at okhttp3.internal.http1.HeadersReader.readLine(HeadersReader.kt:29) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:180) ~[okhttp-4.12.0.jar:na]
+	... 16 common frames omitted
+
+2025-06-30T17:54:14.891+01:00 ERROR 5512 --- [OkHttp http://localhost:4318/...] [                                                 ] i.o.exporter.internal.http.HttpExporter  : Failed to export spans. The request could not be executed. Full error message: unexpected end of stream on http://localhost:4318/...
+
+java.io.IOException: unexpected end of stream on http://localhost:4318/...
+	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:210) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:110) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:93) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:34) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.connection.RealCall$AsyncCall.run(RealCall.kt:517) ~[okhttp-4.12.0.jar:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+	Suppressed: java.io.IOException: unexpected end of stream on http://localhost:4318/...
+		... 17 common frames omitted
+	Caused by: java.io.EOFException: \n not found: limit=0 content=…
+		at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:335)
+		at okhttp3.internal.http1.HeadersReader.readLine(HeadersReader.kt:29)
+		at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:180)
+		... 16 common frames omitted
+Caused by: java.io.EOFException: \n not found: limit=0 content=…
+	at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.kt:335) ~[okio-jvm-3.6.0.jar:na]
+	at okhttp3.internal.http1.HeadersReader.readLine(HeadersReader.kt:29) ~[okhttp-4.12.0.jar:na]
+	at okhttp3.internal.http1.Http1ExchangeCodec.readResponseHeaders(Http1ExchangeCodec.kt:180) ~[okhttp-4.12.0.jar:na]
+	... 16 common frames omitted
+
+2025-06-30T17:55:37.729+01:00  WARN 5512 --- [SpringApplicationShutdownHook] [                                                 ] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 42102, SQLState: 42S02
+2025-06-30T17:55:37.737+01:00 ERROR 5512 --- [SpringApplicationShutdownHook] [                                                 ] o.h.engine.jdbc.spi.SqlExceptionHelper   : Table "EVENT_PUBLICATION" not found; SQL statement:
+select jep1_0.id,jep1_0.completion_date,jep1_0.event_type,jep1_0.listener_id,jep1_0.publication_date,jep1_0.serialized_event from event_publication jep1_0 where jep1_0.completion_date is null order by jep1_0.publication_date [42102-224]
+2025-06-30T17:55:37.754+01:00  WARN 5512 --- [SpringApplicationShutdownHook] [                                                 ] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'eventPublicationRegistry': org.hibernate.exception.SQLGrammarException: could not prepare statement [Table "EVENT_PUBLICATION" not found; SQL statement:
+select jep1_0.id,jep1_0.completion_date,jep1_0.event_type,jep1_0.listener_id,jep1_0.publication_date,jep1_0.serialized_event from event_publication jep1_0 where jep1_0.completion_date is null order by jep1_0.publication_date [42102-224]] [select jep1_0.id,jep1_0.completion_date,jep1_0.event_type,jep1_0.listener_id,jep1_0.publication_date,jep1_0.serialized_event from event_publication jep1_0 where jep1_0.completion_date is null order by jep1_0.publication_date]
+2025-06-30T17:55:37.791+01:00  INFO 5512 --- [SpringApplicationShutdownHook] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-30T17:55:37.812+01:00  INFO 5512 --- [SpringApplicationShutdownHook] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-30T17:55:37.830+01:00  INFO 5512 --- [SpringApplicationShutdownHook] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -1,0 +1,95 @@
+
+
+services:
+  alloy:
+    image: grafana/alloy:latest
+    ports:
+      - 12345:12345
+    volumes:
+      - ./alloy-config.alloy:/etc/alloy/config.alloy
+      #- ./logs:/tmp/app-logs/
+      #- C:/tmp/app-logs:/tmp/app-logs
+      - ./logs:/spring_modulith-main/PetClinicModulithAsyncObservability/monitoring/logs
+    command: run --server.http.listen-addr=0.0.0.0:12345 --storage.path=/var/lib/alloy/data /etc/alloy/config.alloy
+    depends_on:
+      - loki
+    networks:
+      - loki
+  loki:
+    image: grafana/loki:3.4
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./loki-config.yaml:/etc/loki/local-config.yaml
+    command: -config.file=/etc/loki/local-config.yaml
+    networks:
+      - loki
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus-config.yml:/etc/prometheus/prometheus.yml
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    networks:
+      - loki
+  tempo:
+    image: grafana/tempo:latest
+    ports:
+      - "3200:3200"  # API HTTP
+      - "4317:4317"  # OTLP gRPC
+      - "4318:4318"    #OTLP HTTP
+    volumes:
+      - ./tempo-config.yaml:/etc/tempo.yaml
+      - ./traces:/tmp/tempo
+    command: -config.file=/etc/tempo.yaml
+    networks:
+      - loki
+  grafana:
+    image: grafana/grafana:latest
+    environment:
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_BASIC_ENABLED=false
+    ports:
+      - 3000:3000/tcp
+    entrypoint:
+      - sh
+      - -euc
+      - |
+        mkdir -p /etc/grafana/provisioning/datasources
+        cat <<EOF > /etc/grafana/provisioning/datasources/ds.yaml
+        apiVersion: 1
+        datasources:
+        - name: Prometheus
+          type: prometheus
+          access: proxy
+          url: 'http://prometheus:9090'
+        - name: Loki
+          type: loki
+          access: proxy
+          orgId: 1
+          url: 'http://loki:3100'
+          basicAuth: false
+          isDefault: true
+          version: 1
+          editable: true
+        - name: Tempo
+          type: tempo
+          access: proxy
+          url: http://tempo:3200
+          jsonData:
+            httpMethod: "GET"
+            tracesToLogs:
+              datasourceUid: "loki"
+            serviceMap:
+              datasourceUid: "prometheus"
+        EOF
+        /run.sh
+    networks:
+      - loki
+
+networks:
+  loki:
+    driver: bridge

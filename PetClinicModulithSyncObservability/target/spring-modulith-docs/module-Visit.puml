@@ -1,0 +1,21 @@
+@startuml
+title Visit
+
+top to bottom direction
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4.puml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+Container_Boundary("PetClinicApplicationSync.PetClinicApplicationSync_boundary", "PetClinicApplicationSync", $tags="") {
+  Component(PetClinicApplicationSync.PetClinicApplicationSync.Owner, "Owner", "Module", "", $tags="")
+  Component(PetClinicApplicationSync.PetClinicApplicationSync.Visit, "Visit", "Module", "", $tags="")
+  Component(PetClinicApplicationSync.PetClinicApplicationSync.Pet, "Pet", "Module", "", $tags="")
+}
+
+Rel_D(PetClinicApplicationSync.PetClinicApplicationSync.Pet, PetClinicApplicationSync.PetClinicApplicationSync.Owner, "uses", $tags="")
+Rel_D(PetClinicApplicationSync.PetClinicApplicationSync.Visit, PetClinicApplicationSync.PetClinicApplicationSync.Pet, "uses", $tags="")
+Rel_D(PetClinicApplicationSync.PetClinicApplicationSync.Visit, PetClinicApplicationSync.PetClinicApplicationSync.Owner, "uses", $tags="")
+
+SHOW_LEGEND(true)
+@enduml

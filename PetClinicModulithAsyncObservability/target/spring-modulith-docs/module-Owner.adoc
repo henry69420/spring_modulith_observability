@@ -1,0 +1,12 @@
+[%autowidth.stretch, cols="h,a"]
+|===
+|Base package
+|`org.springframework.samples.Owner`
+|Spring components
+|_Services_
+
+* `o.s.s.O.OwnerExternalAPI` (via `o.s.s.O.service.OwnerManagement` listening to `o.s.s.n.AddVisitPet`, `o.s.s.n.SavePetEvent`)
+|Events listened to
+|* `o.s.s.n.SavePetEvent`
+* `o.s.s.n.AddVisitPet`
+|===

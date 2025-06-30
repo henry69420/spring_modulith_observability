@@ -1,0 +1,12 @@
+[%autowidth.stretch, cols="h,a"]
+|===
+|Base package
+|`org.springframework.samples.Visit`
+|Spring components
+|_Services_
+
+* `o.s.s.V.VisitExternalAPI` (via `o.s.s.V.service.VisitService`)
+|Bean references
+|* `o.s.s.P.PetPublicAPI` (in Pet)
+* `o.s.s.O.OwnerPublicAPI` (in Owner)
+|===
