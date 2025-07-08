@@ -1,3 +1,7 @@
+# Observability in Spring Applications: A Comparative Study
+
+**This project extends previous work** ([original project available here](https://github.com/miguel1211593/spring_modulith/tree/main)) by introducing **observability** to evaluate its impact across three Spring architectures: traditional monolith, synchronous modulith, and asynchronous modulith. Using a unified observability stack (**Grafana Alloy, Prometheus, Loki, and Tempo**), we measure key metrics (latency, throughput, error rates) under load/stress tests with **Apache JMeter**.
+
 # Exploring Modularity in Monoliths
 
 Modular monolith application development using Spring Modulith and comparasion with non modular monolith.
